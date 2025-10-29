@@ -1,4 +1,13 @@
 #!/bin/bash
+#
+# 1to2proxy - IP Address Replacement Script
+#
+# РЕКОМЕНДОВАННЫЙ СПОСОБ ЗАПУСКА:
+# sudo bash <(wget -qO- https://raw.githubusercontent.com/Mortyo666/1to2proxy/main/1to2proxy.sh)
+#
+# ВНИМАНИЕ: Запускайте скрипт ТОЛЬКО из официального репозитория!
+# Официальный репозиторий: https://github.com/Mortyo666/1to2proxy
+#
 
 iplist=$(ip a | grep "inet " | grep -v '127.0.0.1\|10.180.' | cut -d "/" -f1 | rev | cut -d " " -f1 | rev )
 ip1=$(echo $iplist | cut -d " " -f1)
